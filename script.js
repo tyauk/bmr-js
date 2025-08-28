@@ -3,16 +3,19 @@ let pass = 1;
 
 function acess5x7(){
   pass = 1;
+  monthSelector();
   showCal();
 }
 
 function acess5x7xl(){
   pass = 2;
+  monthSelector();
   showCal();
 }
 
 function acessikon(){
   pass = 3;
+  monthSelector();
   showCal();
 }
 
@@ -34,6 +37,17 @@ function cal_february(){
 function cal_march(){
   month = 4;
   showCal();
+}
+
+function monthSelector(){
+  if(pass == 1){
+    document.getElementById("currentMonth").innerHTML = "Choose The Month You'd Like to See<br><span style='font-size:0.6em'>Chosen Pass: <span style='color:#FF4D1D'>5x7® Pass</span></span>";
+  }else if(pass == 2){
+    document.getElementById("currentMonth").innerHTML = "Choose The Month You'd Like to See<br><span style='font-size:0.6em'>Chosen Pass: <span style='color:#FF4D1D'>5x7® XL Pass</span></span>";
+  }else if(pass == 3){
+    document.getElementById("currentMonth").innerHTML = "Choose The Month You'd Like to See<br><span style='font-size:0.6em'>Chosen Pass: <span style='color:#FF4D1D'>Ikon Pass</span></span>";
+  }
+  document.getElementById("currentMonth").style.display = "block";
 }
 
 function showCal(){
