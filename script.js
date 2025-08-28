@@ -15,3 +15,7 @@ function acessikon(){
   document.getElementById("5x7XL-Access").style.display = "none";
   document.getElementById("Ikon-Access").style.display = "block";
 }
+
+function nextMonth(){
+  console.log("Next Month");
+}
