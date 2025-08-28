@@ -1,5 +1,5 @@
-const month = 1;
-const pass = 1;
+var month = 1;
+var pass = 1;
 
 function acess5x7(){
   pass = 1;
