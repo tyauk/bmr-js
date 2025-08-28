@@ -60,6 +60,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 1 && month == 2){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "block";
@@ -69,6 +70,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 1 && month == 3){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "none";
@@ -78,6 +80,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 1 && month == 4){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "none";
@@ -87,6 +90,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 2 && month == 1){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "none";
@@ -96,6 +100,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "block";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 2 && month == 2){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "none";
@@ -105,6 +110,7 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "block";
     document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "none";
   }else if(pass == 2 && month == 3){
     document.getElementById("december-one").style.display = "none";
     document.getElementById("january-one").style.display = "none";
@@ -114,5 +120,16 @@ function showCal(){
     document.getElementById("december-two").style.display = "none";
     document.getElementById("january-two").style.display = "none";
     document.getElementById("february-two").style.display = "block";
+    document.getElementById("march-two").style.display = "none";
+  }else if(pass == 2 && month == 4){
+    document.getElementById("december-one").style.display = "none";
+    document.getElementById("january-one").style.display = "none";
+    document.getElementById("february-one").style.display = "none";
+    document.getElementById("march-one").style.display = "none";
+    
+    document.getElementById("december-two").style.display = "none";
+    document.getElementById("january-two").style.display = "none";
+    document.getElementById("february-two").style.display = "none";
+    document.getElementById("march-two").style.display = "block";
   }
 }
