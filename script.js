@@ -1,5 +1,5 @@
-var month = 1;
-var pass = 1;
+let month = 1;
+let pass = 1;
 
 function acess5x7(){
   pass = 1;
