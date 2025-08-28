@@ -38,24 +38,24 @@ function cal_march(){
 
 function showCal(){
   if(pass == 1 && month == 1){
-    document.getElementById("5x7-December").style.display = "block";
-    document.getElementById("5x7-Janurary").style.display = "none";
-    document.getElementById("5x7-February").style.display = "none";
-    document.getElementById("5x7-March").style.display = "none";
+    document.getElementById("december-one").style.display = "block";
+    document.getElementById("january-one").style.display = "none";
+    document.getElementById("february-one").style.display = "none";
+    document.getElementById("march-one").style.display = "none";
   }else if(pass == 1 && month == 2){
-    document.getElementById("5x7-December").style.display = "none";
-    document.getElementById("5x7-Janurary").style.display = "block";
-    document.getElementById("5x7-February").style.display = "none";
-    document.getElementById("5x7-March").style.display = "none";
+    document.getElementById("december-one").style.display = "none";
+    document.getElementById("january-one").style.display = "block";
+    document.getElementById("february-one").style.display = "none";
+    document.getElementById("march-one").style.display = "none";
   }else if(pass == 1 && month == 3){
-    document.getElementById("5x7-December").style.display = "none";
-    document.getElementById("5x7-Janurary").style.display = "none";
-    document.getElementById("5x7-February").style.display = "block";
-    document.getElementById("5x7-March").style.display = "none";
+    document.getElementById("december-one").style.display = "none";
+    document.getElementById("january-one").style.display = "none";
+    document.getElementById("february-one").style.display = "block";
+    document.getElementById("march-one").style.display = "none";
   }else if(pass == 1 && month == 4){
-    document.getElementById("5x7-December").style.display = "none";
-    document.getElementById("5x7-Janurary").style.display = "none";
-    document.getElementById("5x7-February").style.display = "none";
-    document.getElementById("5x7-March").style.display = "block";
+    document.getElementById("december-one").style.display = "none";
+    document.getElementById("january-one").style.display = "none";
+    document.getElementById("february-one").style.display = "none";
+    document.getElementById("march-one").style.display = "block";
   }
 }
