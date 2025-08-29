@@ -194,6 +194,36 @@ function scroll_to_calendar(){
 
 
 
+
+
+
+// Function to check the 'description' elements and update the resortFee variable accordingly
+    function checkLodges(){
+        let lodges = document.getElementsByClassName("promo-banner");
+
+        //console.log(lodges.length);
+
+        if(lodges.length > 0){
+            for(let i = 0; i < lodges.length; i++){
+                let results = lodges[i].innerHTML;
+                //console.log(results);
+
+                if(results == "Operated by Blue Mountain Resort"){
+                  lodges[i].style.backgroundColor = "#0076a2 !important";
+                }else{
+                  lodges[i].style.backgroundColor = "#d94329 !important";
+                }
+
+                /*if((results.includes("Mosaic")) || (results.includes("Inn"))){
+                    console.log("RESORT FEE ACTIVE");
+                    resortFee = true;
+                    resortFeeNotice();
+                    break;  // Exit loop once we find a match
+                }*/
+            }
+        }
+    }
+
     function updateCarousel(){
 
       let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
@@ -201,7 +231,7 @@ function scroll_to_calendar(){
       if(carousel.length > 0){
 
         if (window.location.href.indexOf("hours") != -1){
-          carousel[0].style.height = "200px";
+          carousel[1].style.height = "200px";
         }
 
       }
