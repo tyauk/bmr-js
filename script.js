@@ -176,7 +176,7 @@ function showCal(){
 
 function scroll_to_month(){
   const id = 'chooseMonth';
-  const yOffset = -50; 
+  const yOffset = -100; 
   const element = document.getElementById(id);
   const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
@@ -185,7 +185,7 @@ function scroll_to_month(){
 
 function scroll_to_calendar(){
   const id = 'access-calendar';
-  const yOffset = -50; 
+  const yOffset = -100; 
   const element = document.getElementById(id);
   const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
