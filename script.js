@@ -5,45 +5,59 @@ function acess5x7(){
   pass = 1;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView();
+  document.getElementById('chooseMonth').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function acess5x7xl(){
   pass = 2;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView();
+  document.getElementById('chooseMonth').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function acessikon(){
   pass = 3;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView();
+  document.getElementById('chooseMonth').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function cal_december(){
   month = 1;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView();
+  document.getElementById('access-calendar').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function cal_january(){
   month = 2;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView();
+  document.getElementById('access-calendar').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function cal_february(){
   month = 3;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView();
+  document.getElementById('access-calendar').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function cal_march(){
   month = 4;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView();
+  document.getElementById('access-calendar').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
 function monthSelector(){
