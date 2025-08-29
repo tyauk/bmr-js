@@ -191,3 +191,32 @@ function scroll_to_calendar(){
 
   window.scrollTo({top: y, behavior: 'smooth'});
 }
+
+
+
+    function updateCarousel(){
+
+      let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
+
+      if(carousel.length > 0){
+
+        if (window.location.href.indexOf("hours") != -1){
+          carousel[0].style.height = "200px";
+        }
+
+      }
+
+    }
+
+    // Set up a MutationObserver to monitor changes in the DOM
+    var observer = new MutationObserver(function(mutations){
+        mutations.forEach(function(mutation){
+            updateCarousel();  // Call the function each time a mutation is observed
+        });
+    });
+
+    // Start observing the document for changes in the child elements
+    observer.observe(document.body, {
+        childList: true,   // Observe direct children of the target node
+        subtree: true      // Observe changes within any descendants
+    });
