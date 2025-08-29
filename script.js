@@ -5,38 +5,45 @@ function acess5x7(){
   pass = 1;
   monthSelector();
   showCal();
+  document.getElementById('chooseMonth').scrollIntoView();
 }
 
 function acess5x7xl(){
   pass = 2;
   monthSelector();
   showCal();
+  document.getElementById('chooseMonth').scrollIntoView();
 }
 
 function acessikon(){
   pass = 3;
   monthSelector();
   showCal();
+  document.getElementById('chooseMonth').scrollIntoView();
 }
 
 function cal_december(){
   month = 1;
   showCal();
+  document.getElementById('access-calendar').scrollIntoView();
 }
 
 function cal_january(){
   month = 2;
   showCal();
+  document.getElementById('access-calendar').scrollIntoView();
 }
 
 function cal_february(){
   month = 3;
   showCal();
+  document.getElementById('access-calendar').scrollIntoView();
 }
 
 function cal_march(){
   month = 4;
   showCal();
+  document.getElementById('access-calendar').scrollIntoView();
 }
 
 function monthSelector(){
