@@ -1,63 +1,52 @@
 let month = 1;
 let pass = 1;
 
+
+
+
 function acess5x7(){
   pass = 1;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_month();
 }
 
 function acess5x7xl(){
   pass = 2;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_month();
 }
 
 function acessikon(){
   pass = 3;
   monthSelector();
   showCal();
-  document.getElementById('chooseMonth').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_month();
 }
 
 function cal_december(){
   month = 1;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_calendar();
 }
 
 function cal_january(){
   month = 2;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_calendar();
 }
 
 function cal_february(){
   month = 3;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_calendar();
 }
 
 function cal_march(){
   month = 4;
   showCal();
-  document.getElementById('access-calendar').scrollIntoView({
-    behavior: 'smooth'
-  });
+  scroll_to_calendar();
 }
 
 function monthSelector(){
@@ -181,4 +170,24 @@ function showCal(){
 
     document.getElementById("ikon-access").style.display = "block";
   }
+}
+
+
+
+function scroll_to_month(){
+  const id = 'chooseMonth';
+  const yOffset = -50; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+  window.scrollTo({top: y, behavior: 'smooth'});
+}
+
+function scroll_to_calendar(){
+  const id = 'access-calendar';
+  const yOffset = -50; 
+  const element = document.getElementById(id);
+  const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+  window.scrollTo({top: y, behavior: 'smooth'});
 }
