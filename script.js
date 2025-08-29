@@ -22,7 +22,7 @@ function acessikon(){
   pass = 3;
   monthSelector();
   showCal();
-  scroll_to_month();
+  scroll_to_calendar();
 }
 
 function cal_december(){
