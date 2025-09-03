@@ -197,64 +197,61 @@ function scroll_to_calendar(){
 
 
 
-// Function to check the 'description' elements and update the resortFee variable accordingly
-    function checkLodges(){
-        let lodges = document.getElementsByClassName("promo-banner");
+function checkLodges(){
 
-        //console.log(lodges.length);
+  let lodges = document.getElementsByClassName("promo-banner");
 
-        if(lodges.length > 0){
-            for(let i = 0; i < lodges.length; i++){
-                let results = lodges[i].innerHTML;
-
-                if(results == "Operated by Blue Mountain Resort"){
-                  lodges[i].classList.add('bmr-unit');
-                }else{
-                  lodges[i].classList.add('alternative-unit');
-                }
-            }
-        }
+  if(lodges.length > 0){
+          
+    for(let i = 0; i < lodges.length; i++){
+      let results = lodges[i].innerHTML;
+      if(results == "Operated by Blue Mountain Resort"){
+        lodges[i].classList.add('bmr-unit');
+      }else{
+        lodges[i].classList.add('alternative-unit');
+      }
     }
+  }
+}
 
-    function sp_countdown(){
-      let countdown_title = document.querySelectorAll('.animated-countdown .title');
 
-      if(countdown_title.length > 0){
+
+function sp_countdown(){
+      
+  let countdown_title = document.querySelectorAll('.animated-countdown .title');
+
+  if(countdown_title.length > 0){
         
-        for(let i = 0; i < countdown_title.length; i++){
+    for(let i = 0; i < countdown_title.length; i++){
 
-          if(window.location.href.indexOf("season-passes") != -1){
-            countdown_title[i].classList.add('season-pass-heading');
-          }
-
-        }
+      if(window.location.href.indexOf("season-passes") != -1){
+        countdown_title[i].classList.add('season-pass-heading');
       }
+
     }
+  }
+}
 
-    /*
-    function updateCarousel(){
+function inappview(){
 
-      let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
+  let inapp = document.getElementsByClassName('header-v3');
 
-      if(carousel.length > 0){
+  if(window.location.href.indexOf("app-ecomm") != -1){
+    inapp[0].classList.add('in-app-webview');
+  }
 
-        if (window.location.href.indexOf("hours") != -1){
-          carousel[1].style.height = "200px";
-        }
+}
 
-      }
-
-    }*/
-
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            checkLodges();
-            sp_countdown();
-        });
-    });
+var observer = new MutationObserver(function(mutations){
+  mutations.forEach(function(mutation){
+    checkLodges();
+    sp_countdown();
+    inappview();
+  });
+});
 
 
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
