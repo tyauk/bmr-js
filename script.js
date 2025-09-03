@@ -206,24 +206,17 @@ function scroll_to_calendar(){
         if(lodges.length > 0){
             for(let i = 0; i < lodges.length; i++){
                 let results = lodges[i].innerHTML;
-                //console.log(results);
 
                 if(results == "Operated by Blue Mountain Resort"){
-                  lodges[i].style.backgroundColor = "#0076a2 !important";
+                  lodges[i].classList.add('bmr-unit');
                 }else{
-                  lodges[i].style.backgroundColor = "#d94329 !important";
+                  lodges[i].classList.add('alternative-unit');
                 }
-
-                /*if((results.includes("Mosaic")) || (results.includes("Inn"))){
-                    console.log("RESORT FEE ACTIVE");
-                    resortFee = true;
-                    resortFeeNotice();
-                    break;  // Exit loop once we find a match
-                }*/
             }
         }
     }
 
+    /*
     function updateCarousel(){
 
       let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
@@ -236,17 +229,16 @@ function scroll_to_calendar(){
 
       }
 
-    }
+    }*/
 
-    // Set up a MutationObserver to monitor changes in the DOM
     var observer = new MutationObserver(function(mutations){
         mutations.forEach(function(mutation){
-            updateCarousel();  // Call the function each time a mutation is observed
+            checkLodges();
         });
     });
 
-    // Start observing the document for changes in the child elements
+
     observer.observe(document.body, {
-        childList: true,   // Observe direct children of the target node
-        subtree: true      // Observe changes within any descendants
+        childList: true,
+        subtree: true
     });
