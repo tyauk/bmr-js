@@ -220,9 +220,31 @@ function scroll_to_calendar(){
       let countdown_title = document.querySelectorAll('.animated-countdown .title');
 
       if(countdown_title.length > 0){
-        console.log("Countdown Timer Detected");
+        
+        for(let i = 0; i < countdown_title.length; i++){
+
+          if(window.location.href.indexOf("season-passes") != -1){
+            countdown_title[i].classList.add('season-pass-heading');
+          }
+
+        }
       }
     }
+
+    /*
+    function updateCarousel(){
+
+      let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
+
+      if(carousel.length > 0){
+
+        if (window.location.href.indexOf("hours") != -1){
+          carousel[1].style.height = "200px";
+        }
+
+      }
+
+    }*/
 
     var observer = new MutationObserver(function(mutations){
         mutations.forEach(function(mutation){
