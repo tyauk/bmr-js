@@ -236,9 +236,11 @@ function inappview(){
 
   let inapp = document.getElementsByClassName('header-v3');
 
-  if(window.location.href.indexOf("app-ecomm") != -1){
+  console.log(inapp);
+
+  /*if(window.location.href.indexOf("app-ecomm") != -1){
     inapp[0].classList.add('in-app-webview');
-  }
+  }*/
 
 }
 
