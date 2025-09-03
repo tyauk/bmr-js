@@ -244,6 +244,10 @@ function inappview(){
 
 }
 
+if(window.location.href.indexOf("app-ecomm") != -1){
+  document.body.style.backgroundColor = "#ececec";
+}
+
 var observer = new MutationObserver(function(mutations){
   mutations.forEach(function(mutation){
     checkLodges();
