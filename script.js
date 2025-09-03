@@ -234,13 +234,13 @@ function sp_countdown(){
 
 function inappview(){
 
-  let inapp = document.getElementsByClassName('header-v3');
+  let inapp = document.getElementsByClassName("header-v3");
 
   console.log(inapp[0]);
 
-  /*if(window.location.href.indexOf("app-ecomm") != -1){
+  if(window.location.href.indexOf("app-ecomm") != -1){
     inapp[0].classList.add('in-app-webview');
-  }*/
+  }
 
 }
 
