@@ -216,24 +216,18 @@ function scroll_to_calendar(){
         }
     }
 
-    /*
-    function updateCarousel(){
+    function sp_countdown(){
+      let countdown_title = document.querySelectorAll('.animated-countdown .title');
 
-      let carousel = document.getElementsByClassName("carousel-with-lightbox-wrapper");
-
-      if(carousel.length > 0){
-
-        if (window.location.href.indexOf("hours") != -1){
-          carousel[1].style.height = "200px";
-        }
-
+      if(countdown_title.length > 0){
+        console.log("Countdown Timer Detected");
       }
-
-    }*/
+    }
 
     var observer = new MutationObserver(function(mutations){
         mutations.forEach(function(mutation){
             checkLodges();
+            sp_countdown();
         });
     });
 
