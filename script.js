@@ -202,28 +202,28 @@ function scroll_to_calendar(){
 
 
 function checkLodges(){
-        let lodges = document.getElementsByClassName("promo-banner");
+  let lodges = document.getElementsByClassName("promo-banner");
 
-        if(lodges.length > 0){
-            for(let i = 0; i < lodges.length; i++){
-                let results = lodges[i].innerHTML;
+  if(lodges.length > 0){
+    for(let i = 0; i < lodges.length; i++){
+      let results = lodges[i].innerHTML;
 
-                if(results == "Operated by Blue Mountain Resort"){
-                  lodges[i].style.backgroundColor = "#0076a2 !important";
-                }else{
-                  lodges[i].style.backgroundColor = "#d94329 !important";
-                }
-            }
-        }
+      if(results == "Operated by Blue Mountain Resort"){
+        lodges[i].classList.add('bmr-unit');
+      }else if(results == "Operated by Property Valet"){
+        lodges[i].classList.add('pv-unit');
+      }
     }
+  }
+}
 
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            checkLodges();
-        });
-    });
+var observer = new MutationObserver(function(mutations){
+  mutations.forEach(function(mutation){
+    checkLodges();
+  });
+});
 
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
