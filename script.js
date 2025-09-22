@@ -191,3 +191,39 @@ function scroll_to_calendar(){
 
   window.scrollTo({top: y, behavior: 'smooth'});
 }
+
+
+
+
+
+
+
+
+
+
+function checkLodges(){
+        let lodges = document.getElementsByClassName("promo-banner");
+
+        if(lodges.length > 0){
+            for(let i = 0; i < lodges.length; i++){
+                let results = lodges[i].innerHTML;
+
+                if(results == "Operated by Blue Mountain Resort"){
+                  lodges[i].style.backgroundColor = "#0076a2 !important";
+                }else{
+                  lodges[i].style.backgroundColor = "#d94329 !important";
+                }
+            }
+        }
+    }
+
+    var observer = new MutationObserver(function(mutations){
+        mutations.forEach(function(mutation){
+            checkLodges();
+        });
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
