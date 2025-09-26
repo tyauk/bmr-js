@@ -199,11 +199,18 @@ function scroll_to_calendar(){
 
 
 
+function checkCarousel(){
+  let carousel = document.getElementsByClassName("swipe-wrap");
 
+  if((window.location.href.indexOf("village-suites") !== -1)){
+    carousel[0].classList.add('lodging-carousel');
+  }else if((window.location.href.indexOf("whats-new-at-blue") !== -1)){
+    carousel[0].classList.add('widescreen-carousel');
+  }
+}
 
 function checkLodges(){
   let lodges = document.getElementsByClassName("promo-banner");
-  let carousel = document.getElementsByClassName("swipe-wrap");
 
   if(lodges.length > 0){
     for(let i = 0; i < lodges.length; i++){
@@ -217,15 +224,12 @@ function checkLodges(){
     }
   }
 
-  if((window.location.href.indexOf("village-suites") !== -1)){
-    carousel[0].classList.add('lodging-carousel');
-  }
-
 }
 
 var observer = new MutationObserver(function(mutations){
   mutations.forEach(function(mutation){
     checkLodges();
+    checkCarousel();
   });
 });
 
