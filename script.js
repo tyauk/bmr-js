@@ -201,7 +201,7 @@ function scroll_to_calendar(){
 
 function checkCarousel(){
   let carousel = document.getElementsByClassName("swipe-wrap");
-  let mutliCarousel = document.querySelectorAll(".carousel-with-lightbox-wrapper .swipe-wrap");
+  const mutliCarousel = document.querySelectorAll(".carousel-with-lightbox-wrapper .swipe-wrap");
 
   if((window.location.href.indexOf("village-suites") !== -1)){
     carousel[0].classList.add('lodging-carousel');
