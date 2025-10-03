@@ -201,13 +201,12 @@ function scroll_to_calendar(){
 
 function checkCarousel(){
   let carousel = document.getElementsByClassName("swipe-wrap");
-  const mutliCarousel = document.querySelectorAll(".carousel-with-lightbox-wrapper .swipe-wrap");
 
   if((window.location.href.indexOf("village-suites") !== -1)){
     carousel[0].classList.add('lodging-carousel');
   }else if((window.location.href.indexOf("whats-new-at-blue") !== -1)){
-    console.log(multiCarousel);
-    //mutliCarousel[0].classList.add('widescreen-carousel');
+    carousel[0].classList.add('widescreen-carousel');
+    carousel[2].classList.add('widescreen-carousel');
   }else if((window.location.href.indexOf("opening-day") !== -1)){
     carousel[0].classList.add('widescreen-carousel');
   }
