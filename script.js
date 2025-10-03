@@ -206,10 +206,9 @@ function checkCarousel(){
     carousel[0].classList.add('lodging-carousel');
   }else if((window.location.href.indexOf("whats-new-at-blue") !== -1)){
     for(let i = 0; i < carousel.length; i++){
-      if(i == 0){
-        carousel[i].classList.add('widescreen-carousel');
-      }else{
-        carousel[i].classList.add('expanded-carousel');
+      carousel[i].classList.add('widescreen-carousel');
+      if(i > 0){
+        carousel[i].classList.add('half-size');
       }
     }
   }else if((window.location.href.indexOf("opening-day") !== -1)){
