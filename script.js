@@ -205,8 +205,9 @@ function checkCarousel(){
   if((window.location.href.indexOf("village-suites") !== -1)){
     carousel[0].classList.add('lodging-carousel');
   }else if((window.location.href.indexOf("whats-new-at-blue") !== -1)){
-    carousel[0].classList.add('widescreen-carousel');
-    carousel[2].classList.add('widescreen-carousel');
+    for(let i = 0; i < carousel.length; i++){
+      carousel[i].classList.add('expanded-carousel');
+    }
   }else if((window.location.href.indexOf("opening-day") !== -1)){
     carousel[0].classList.add('widescreen-carousel');
   }
