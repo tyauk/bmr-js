@@ -214,6 +214,8 @@ function checkCarousel(){
     }
   }else if((window.location.href.indexOf("opening-day") !== -1)){
     carousel[0].classList.add('widescreen-carousel');
+  }else if((window.location.href.indexOf("winter-is-on-sale") !== -1)){
+    carousel[0].classList.add('widescreen-carousel');
   }
 }
 
